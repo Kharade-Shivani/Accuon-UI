@@ -117,18 +117,15 @@ const Home = () => {
 
   // Project locations with exact coordinates
   const projectLocations = [
-    { company: "INDORAMA CORPORATION", country: "Russia", lat: 55.7558, lng: 37.6173, city: "Moscow" },
-    { company: "INDORAMA CORPORATION", country: "Georgia", lat: 41.7151, lng: 44.8271, city: "Tbilisi" },
-    { company: "TACO.CO", country: "Turkey", lat: 39.9334, lng: 32.8597, city: "Ankara" },
-    { company: "GCI", country: "Saudi Arabia", lat: 24.7136, lng: 46.6753, city: "Riyadh" },
-    { company: "FARABI", country: "Saudi Arabia", lat: 21.4858, lng: 39.1925, city: "Mecca" },
-    { company: "JOSEPH", country: "UAE", lat: 25.2048, lng: 55.2708, city: "Dubai" },
-    { company: "KEYBOUT", country: "Tanzania", lat: -6.7924, lng: 39.2083, city: "Dar es Salaam" },
-    { company: "SENGENG", country: "Singapore", lat: 1.3521, lng: 103.8198, city: "Singapore" },
-    // Additional locations for better global representation
-    { company: "ACCUON INDIA", country: "India", lat: 18.5204, lng: 73.8567, city: "Pune" },
-    { company: "ACCUON EUROPE", country: "Germany", lat: 52.5200, lng: 13.4050, city: "Berlin" },
-    { company: "ACCUON AMERICAS", country: "USA", lat: 40.7128, lng: -74.0060, city: "New York" },
+    { company: "INDORAMA CORPORATION", country: "Russia", lat: 55.7558, lng: 37.6173,  },
+    { company: "INDORAMA CORPORATION", country: "Georgia", lat: 41.7151, lng: 44.8271, },
+    { company: "TACO.CO", country: "Turkey", lat: 39.9334, lng: 32.8597, },
+    { company: "GCI", country: "Saudi Arabia", lat: 24.7136, lng: 46.6753, },
+    { company: "FARABI", country: "Saudi Arabia", lat: 21.4858, lng: 39.1925,  },
+    { company: "JOSEPH", country: "UAE", lat: 25.2048, lng: 55.2708,  },
+    { company: "KEYBOUT", country: "Tanzania", lat: -6.7924, lng: 39.2083,  },
+    { company: "SENGENG", country: "Singapore", lat: 1.3521, lng: 103.8198,  },
+   
   ];
 
   // Get header height dynamically
@@ -1664,9 +1661,7 @@ const Home = () => {
                         <div className="text-gray-500 text-sm mt-1">
                           {location.city}
                         </div>
-                        <div className="mt-2 pt-2 border-t border-gray-200 text-xs text-gray-400">
-                          Project Completed
-                        </div>
+                        
                       </div>
                     </Popup>
                   </Marker>
