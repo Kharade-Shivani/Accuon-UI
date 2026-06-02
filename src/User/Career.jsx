@@ -499,33 +499,7 @@ function Career() {
               </p>
             </div>
 
-            {/* Filter and Search Bar */}
-            <div className="max-w-4xl mx-auto mb-8 flex flex-col md:flex-row gap-4">
-              <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search jobs by title, department, or experience..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100"
-                />
-              </div>
-              <div className="relative">
-                <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-                <select
-                  value={selectedDepartment}
-                  onChange={(e) => setSelectedDepartment(e.target.value)}
-                  className="pl-10 pr-8 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100 bg-white appearance-none cursor-pointer"
-                >
-                  {departments.map(dept => (
-                    <option key={dept} value={dept}>
-                      {dept === 'all' ? 'All Departments' : dept}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
+          
 
             {/* Loading State */}
             {loading && (
