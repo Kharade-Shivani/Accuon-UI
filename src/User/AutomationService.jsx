@@ -287,7 +287,7 @@ function AutomationService() {
     capabilities: [
       {
         title: "PLC Programming",
-        description: "We provide advanced PLC Programming for industrial automation systems. Our expertise includes PLC software development, control logic design, HMI & SCADA integration, process automation, troubleshooting and communication protocol configuration. We deliver reliable, scalable, and efficient automation solutions that improve productivity, reduce errors and ensure smooth industrial operations.",
+        description: "We provide advanced PLC Programming for industrial automation systems. Our expertise includes PLC software development, control logic design, HMI & SCADA integration, process automation, troubleshooting and communication protocol configuration. We deliver reliable, scalable and efficient automation solutions that improve productivity, reduce errors and ensure smooth industrial operations.",
         icon: Cpu
       },
       {

@@ -487,12 +487,12 @@ const About = () => {
               {/* Policy Points Grid */}
               <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                 {[
-                  { icon: Shield, text: "Delivering reliable, safe, and cost-effective project solutions", color: "red" },
-                  { icon: CheckCircle, text: "Maintaining the highest standards of quality in execution and services", color: "blue" },
-                  { icon: Globe, text: "Ensuring compliance with applicable statutory, regulatory, and client requirements", color: "red" },
-                  { icon: TrendingUp, text: "Continuously improving our processes, systems, and employee competencies", color: "blue" },
-                  { icon: Users, text: "Promoting a culture of safety, innovation, teamwork, and customer satisfaction", color: "red" },
-                  { icon: Handshake, text: "Building long-term relationships with clients, vendors, and stakeholders through trust and professionalism", color: "blue" }
+                  { icon: Shield, text: "Delivering reliable, safe, and cost-effective project solutions.", color: "red" },
+                  { icon: CheckCircle, text: "Maintaining the highest standards of quality in execution and services.", color: "blue" },
+                  { icon: Globe, text: "Ensuring compliance with applicable statutory, regulatory, and client requirements.", color: "red" },
+                  { icon: TrendingUp, text: "Continuously improving our processes, systems, and employee competencies.", color: "blue" },
+                  { icon: Users, text: "Promoting a culture of safety, innovation, teamwork, and customer satisfaction.", color: "red" },
+                  { icon: Handshake, text: "Building long-term relationships with clients, vendors, and stakeholders through trust and professionalism.", color: "blue" }
                 ].map((item, idx) => {
                   const IconComponent = item.icon;
                   return (
@@ -560,7 +560,7 @@ const About = () => {
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">Our Mission</h3>
                 <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-                  Our mission is delivering solutions on-time with flawless design and Accuon using efficient development techniques and tools. We enable companies to focus on their core competencies, while we handle the integral details of building infrastructure guaranteeing quality delivery with major cost savings.
+                 To deliver reliable, innovative and cost-effective engineering solutions by combining technical excellence, quality workmanship and customer-focused service. We are committed to building long-term partnerships, ensuring safety, maintaining the highest standards of integrity and contributing to the sustainable growth of industries and infrastructure.
                 </p>
               </div>
             </div>
@@ -614,8 +614,7 @@ const About = () => {
             </div>
           </div>
         </section>
-
-       {/* Our Partners Section - Larger cards and logos */}
+{/* Our Partners Section - Complete card size with maximum logo visibility */}
 <section className="py-20 bg-white overflow-hidden">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     {/* Section Header */}
@@ -641,18 +640,18 @@ const About = () => {
               key={`row1-${index}`}
               className="flex-shrink-0 w-64 mx-6"
             >
-              <div className="bg-gray-50 hover:bg-white rounded-2xl p-4 text-center transition-all duration-300 hover:shadow-2xl border border-gray-100 group h-36 flex items-center justify-center">
-                <div className="w-full flex items-center justify-center">
+              <div className="bg-white hover:bg-gray-50 rounded-2xl transition-all duration-300 hover:shadow-2xl border border-gray-200 group overflow-hidden h-48 flex items-center justify-center hover:scale-105 transform">
+                <div className="w-full h-full flex items-center justify-center p-4">
                   {!imageErrors[partner.name] ? (
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-full h-full object-contain max-h-28 min-h-[80px] group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       onError={() => handleImageError(partner.name)}
                     />
                   ) : (
-                    <div className="w-28 h-28 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center">
-                      <Briefcase className="h-14 w-14 text-red-600" />
+                    <div className="w-full h-full bg-gradient-to-br from-red-50 to-blue-50 flex items-center justify-center rounded-xl">
+                      <Briefcase className="h-20 w-20 text-red-600" />
                     </div>
                   )}
                 </div>
@@ -665,18 +664,18 @@ const About = () => {
               key={`row1-duplicate-${index}`}
               className="flex-shrink-0 w-64 mx-6"
             >
-              <div className="bg-gray-50 hover:bg-white rounded-2xl p-4 text-center transition-all duration-300 hover:shadow-2xl border border-gray-100 group h-36 flex items-center justify-center">
-                <div className="w-full flex items-center justify-center">
+              <div className="bg-white hover:bg-gray-50 rounded-2xl transition-all duration-300 hover:shadow-2xl border border-gray-200 group overflow-hidden h-48 flex items-center justify-center hover:scale-105 transform">
+                <div className="w-full h-full flex items-center justify-center p-4">
                   {!imageErrors[partner.name] ? (
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-full h-full object-contain max-h-28 min-h-[80px] group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       onError={() => handleImageError(partner.name)}
                     />
                   ) : (
-                    <div className="w-28 h-28 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center">
-                      <Briefcase className="h-14 w-14 text-red-600" />
+                    <div className="w-full h-full bg-gradient-to-br from-red-50 to-blue-50 flex items-center justify-center rounded-xl">
+                      <Briefcase className="h-20 w-20 text-red-600" />
                     </div>
                   )}
                 </div>
@@ -696,18 +695,18 @@ const About = () => {
               key={`row2-${index}`}
               className="flex-shrink-0 w-64 mx-6"
             >
-              <div className="bg-gray-50 hover:bg-white rounded-2xl p-4 text-center transition-all duration-300 hover:shadow-2xl border border-gray-100 group h-36 flex items-center justify-center">
-                <div className="w-full flex items-center justify-center">
+              <div className="bg-white hover:bg-gray-50 rounded-2xl transition-all duration-300 hover:shadow-2xl border border-gray-200 group overflow-hidden h-48 flex items-center justify-center hover:scale-105 transform">
+                <div className="w-full h-full flex items-center justify-center p-4">
                   {!imageErrors[partner.name] ? (
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-full h-full object-contain max-h-28 min-h-[80px] group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       onError={() => handleImageError(partner.name)}
                     />
                   ) : (
-                    <div className="w-28 h-28 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center">
-                      <Briefcase className="h-14 w-14 text-red-600" />
+                    <div className="w-full h-full bg-gradient-to-br from-red-50 to-blue-50 flex items-center justify-center rounded-xl">
+                      <Briefcase className="h-20 w-20 text-red-600" />
                     </div>
                   )}
                 </div>
@@ -720,18 +719,18 @@ const About = () => {
               key={`row2-duplicate-${index}`}
               className="flex-shrink-0 w-64 mx-6"
             >
-              <div className="bg-gray-50 hover:bg-white rounded-2xl p-4 text-center transition-all duration-300 hover:shadow-2xl border border-gray-100 group h-36 flex items-center justify-center">
-                <div className="w-full flex items-center justify-center">
+              <div className="bg-white hover:bg-gray-50 rounded-2xl transition-all duration-300 hover:shadow-2xl border border-gray-200 group overflow-hidden h-48 flex items-center justify-center hover:scale-105 transform">
+                <div className="w-full h-full flex items-center justify-center p-4">
                   {!imageErrors[partner.name] ? (
                     <img
                       src={partner.logo}
                       alt={partner.name}
-                      className="w-full h-full object-contain max-h-28 min-h-[80px] group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                       onError={() => handleImageError(partner.name)}
                     />
                   ) : (
-                    <div className="w-28 h-28 bg-gradient-to-br from-red-50 to-blue-50 rounded-full flex items-center justify-center">
-                      <Briefcase className="h-14 w-14 text-red-600" />
+                    <div className="w-full h-full bg-gradient-to-br from-red-50 to-blue-50 flex items-center justify-center rounded-xl">
+                      <Briefcase className="h-20 w-20 text-red-600" />
                     </div>
                   )}
                 </div>
@@ -897,7 +896,7 @@ const About = () => {
         </section>
       </div>
 
-    {/* Add CSS animations for marquee effect - Faster speed with hover pause */}
+   {/* Add CSS animations for marquee effect with zoom */}
 <style jsx>{`
   @keyframes marquee-left {
     0% {
@@ -929,6 +928,14 @@ const About = () => {
   .animate-marquee-left:hover,
   .animate-marquee-right:hover {
     animation-play-state: paused;
+  }
+  
+  /* Smooth zoom effect on cards */
+  .group:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+    z-index: 10;
+    position: relative;
   }
 `}</style>
     </div>

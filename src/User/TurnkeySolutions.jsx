@@ -247,12 +247,12 @@ function TurnkeySolutions() {
     capabilities: [
       {
         title: "Design",
-        description: "We deliver innovative engineering design solutions for industrial automation and electrical systems. Our expertise includes electrical system design, MCC/PCC/APFC/PLC panel design, PLC & SCADA development, VFD applications, SLD & GA drawings, wiring schematics, cable sizing and instrumentation design. We also provide BOM preparation, technical documentation and AutoCAD-based drawings. Our focus is on delivering safe, efficient, and customized solutions that meet industry standards and client requirements with reliability and precision.",
+        description: "We deliver innovative engineering design solutions for industrial automation and electrical systems. Our expertise includes electrical system design, MCC/PCC/APFC/PLC panel design, PLC & SCADA development, VFD applications, SLD & GA drawings, wiring schematics, cable sizing and instrumentation design. We also provide BOM preparation, technical documentation and AutoCAD-based drawings. Our focus is on delivering safe, efficient and customized solutions that meet industry standards and client requirements with reliability and precision.",
         icon: Settings
       },
       {
         title: "Engineering",
-        description: "We provide reliable and customized engineering solutions for industrial and automation applications. Our expertise includes electrical and automation Engineering, PLC, SCADA & VFD systems, MCC/PCC/APFC panel engineering, instrumentation and process control solutions. We also specialize in system integration, electrical design, technical documentation, testing, commissioning, retrofit projects and energy-efficient solutions. With a focus on quality, innovation, and performance, we deliver efficient systems that meet diverse industrial requirements.",
+        description: "We provide reliable and customized engineering solutions for industrial and automation applications. Our expertise includes electrical and automation Engineering, PLC, SCADA & VFD systems, MCC/PCC/APFC panel engineering, instrumentation and process control solutions. We also specialize in system integration, electrical design, technical documentation, testing, commissioning, retrofit projects and energy-efficient solutions. With a focus on quality, innovation and performance. We deliver efficient systems that meet diverse industrial requirements.",
         icon: Cpu
       },
       {

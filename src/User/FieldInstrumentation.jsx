@@ -299,7 +299,7 @@ function FieldInstrumentation() {
       },
       {
         title: "Maintenance",
-        description: "We provide comprehensive Field Instrument Maintenance to ensure reliable and continuous operation of industrial instrumentation systems. Our scope includes preventive and corrective maintenance, routine inspections, calibration support, loop checking, signal verification, and spare replacement. We focus on minimizing downtime, improving accuracy, and enhancing system performance for safe and efficient plant operations.",
+        description: "We provide comprehensive Field Instrument Maintenance to ensure reliable and continuous operation of industrial instrumentation systems. Our scope includes preventive and corrective maintenance, routine inspections, calibration support, loop checking, signal verification and spare replacement. We focus on minimizing downtime, improving accuracy and enhancing system performance for safe and efficient plant operations.",
         icon: Wrench
       },
       {

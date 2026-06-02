@@ -289,12 +289,12 @@ function EngineeringService() {
     capabilities: [
       {
         title: "Feasibility Studies",
-        description: "We provide comprehensive Electrical Engineering Feasibility Studies to evaluate technical, economic, operational, safety, and timeline aspects of projects. Our structured approach helps identify risks, optimize designs and ensure compliance. These studies support better decision-making, cost control, improved efficiency, and successful project execution.",
+        description: "We provide comprehensive Electrical Engineering Feasibility Studies to evaluate technical, economic, operational, safety and timeline aspects of projects. Our structured approach helps identify risks, optimize designs and ensure compliance. These studies support better decision-making, cost control, improved efficiency and successful project execution.",
         icon: Target
       },
       {
         title: "Detailed Engineering",
-        description: "We offer comprehensive Detailed Engineering services in Electrical Engineering converting concepts into construction-ready solutions. Our scope includes electrical design, SLDs, wiring diagrams, load calculations, cable sizing, equipment selection, protection and control engineering, and layout design. We ensure compliance with IEC/IS standards, delivering accurate, safe and efficient engineering for reliable project execution and performance.",
+        description: "We offer comprehensive Detailed Engineering services in Electrical Engineering converting concepts into construction-ready solutions. Our scope includes electrical design, SLDs, wiring diagrams, load calculations, cable sizing, equipment selection, protection and control engineering and layout design. We ensure compliance with IEC/IS standards, delivering accurate, safe and efficient engineering for reliable project execution and performance.",
         icon: PenTool
       },
       {

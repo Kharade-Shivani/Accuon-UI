@@ -298,12 +298,12 @@ function ElectricalControlPanel() {
       },
       {
         title: "Assembly & Wiring",
-        description: "We provide precise Assembly & Wiring services for electrical control panels and automation systems. Our scope includes panel assembly, internal wiring of MCC/PCC/PLC/VFD panels, cable termination, and wiring as per approved schematics. We ensure proper labeling, testing, continuity checks, and compliance with IEC/IS standards for safe, reliable, and efficient system operation.",
+        description: "We provide precise Assembly & Wiring services for electrical control panels and automation systems. Our scope includes panel assembly, internal wiring of MCC/PCC/PLC/VFD panels, cable termination and wiring as per approved schematics. We ensure proper labeling, testing, continuity checks and compliance with IEC/IS standards for safe, reliable and efficient system operation.",
         icon: Zap
       },
       {
         title: "Testing",
-        description: "We provide comprehensive Electrical & Instrumentation Testing to ensure safe, reliable, and compliant system performance before commissioning. Our scope includes pre-commissioning checks, insulation and continuity testing, functional and protection system testing and instrumentation loop checks. We also support FAT and SAT activities, ensuring accurate validation, improved safety and dependable long-term operation of industrial systems. ",
+        description: "We provide comprehensive Electrical & Instrumentation Testing to ensure safe, reliable and compliant system performance before commissioning. Our scope includes pre-commissioning checks, insulation and continuity testing, functional and protection system testing and instrumentation loop checks. We also support FAT and SAT activities, ensuring accurate validation, improved safety and dependable long-term operation of industrial systems.",
         icon: CheckCircle
       }
     ],

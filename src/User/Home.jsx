@@ -29,7 +29,37 @@ import {
   VolumeX,
   MapPin
 } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
 import httpClient from '../Api/axios';
+
+// Fix for default marker icons in React-Leaflet
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-2x.png',
+  iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+});
+
+// Custom red marker icon
+const redIcon = new L.Icon({
+  iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+  shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
+
+// Map controller component to set view
+const MapController = ({ center, zoom }) => {
+  const map = useMap();
+  useEffect(() => {
+    map.setView(center, zoom);
+  }, [center, zoom, map]);
+  return null;
+};
 
 const Home = () => {
   const [currentTestimonialSlide, setCurrentTestimonialSlide] = useState(0);
@@ -84,6 +114,22 @@ const Home = () => {
   const [accreditationsData, setAccreditationsData] = useState([]);
   const [loadingAccreditations, setLoadingAccreditations] = useState(true);
   const [accreditationsError, setAccreditationsError] = useState(null);
+
+  // Project locations with exact coordinates
+  const projectLocations = [
+    { company: "INDORAMA CORPORATION", country: "Russia", lat: 55.7558, lng: 37.6173, city: "Moscow" },
+    { company: "INDORAMA CORPORATION", country: "Georgia", lat: 41.7151, lng: 44.8271, city: "Tbilisi" },
+    { company: "TACO.CO", country: "Turkey", lat: 39.9334, lng: 32.8597, city: "Ankara" },
+    { company: "GCI", country: "Saudi Arabia", lat: 24.7136, lng: 46.6753, city: "Riyadh" },
+    { company: "FARABI", country: "Saudi Arabia", lat: 21.4858, lng: 39.1925, city: "Mecca" },
+    { company: "JOSEPH", country: "UAE", lat: 25.2048, lng: 55.2708, city: "Dubai" },
+    { company: "KEYBOUT", country: "Tanzania", lat: -6.7924, lng: 39.2083, city: "Dar es Salaam" },
+    { company: "SENGENG", country: "Singapore", lat: 1.3521, lng: 103.8198, city: "Singapore" },
+    // Additional locations for better global representation
+    { company: "ACCUON INDIA", country: "India", lat: 18.5204, lng: 73.8567, city: "Pune" },
+    { company: "ACCUON EUROPE", country: "Germany", lat: 52.5200, lng: 13.4050, city: "Berlin" },
+    { company: "ACCUON AMERICAS", country: "USA", lat: 40.7128, lng: -74.0060, city: "New York" },
+  ];
 
   // Get header height dynamically
   useEffect(() => {
@@ -661,19 +707,6 @@ const Home = () => {
     };
     return colorMap[title] || 'text-red-600';
   };
-
- const projectLocations = [
-  { company: "INDORAMA CORPORATION", country: "Russia", top: "20%", left: "68%" },
-  { company: "INDORAMA CORPORATION", country: "Georgia", top: "39%", left: "58%" },
-  { company: "TACO.CO", country: "Turkey", top: "42%", left: "56%" },
-  { company: "GCI", country: "Saudi Arabia", top: "49%", left: "61%" },
-  { company: "FARABI", country: "Saudi Arabia", top: "51%", left: "62%" },
-  { company: "JOSEPH", country: "UAE", top: "50%", left: "64%" },
-
-  { company: "KEYBOUT", country: "Tanzania", top: "72%", left: "57.5%" },
-
-  { company: "SENGENG", country: "Singapore", top: "58.5%", left: "75.8%" },
-];
 
   return (
     <div className="min-h-screen bg-white">
@@ -1580,8 +1613,8 @@ const Home = () => {
         </div>
       )}
 
-      {/* World Map Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-50 overflow-hidden">
+      {/* Interactive Leaflet Map Section */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-red-50 to-blue-50 px-4 py-2 rounded-full mb-6 shadow-sm">
@@ -1599,35 +1632,49 @@ const Home = () => {
           </div>
 
           <div className="relative max-w-7xl mx-auto">
-            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-white">
-              <img
-                src="/assets/worldmap.png"
-                alt="World Map"
-                className="w-full h-auto object-contain"
-              />
-              <div className="absolute inset-0">
-                {projectLocations.map((loc, index) => (
-                  <div
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-gray-200 bg-white h-[600px] z-10">
+              <MapContainer
+                center={[20, 0]}
+                zoom={2}
+                style={{ height: '100%', width: '100%' }}
+                zoomControl={true}
+                scrollWheelZoom={true}
+                doubleClickZoom={true}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+                />
+                <MapController center={[20, 0]} zoom={2} />
+                
+                {projectLocations.map((location, index) => (
+                  <Marker
                     key={index}
-                    className="group absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer z-20"
-                    style={{ top: loc.top, left: loc.left }}
+                    position={[location.lat, location.lng]}
+                    icon={redIcon}
                   >
-                    <span className="absolute -top-2 -left-2 h-6 w-6">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-60"></span>
-                    </span>
-                    <span className="relative inline-flex h-4 w-4 rounded-full bg-red-600 border-2 border-white shadow-xl"></span>
-                    <div className="absolute bottom-7 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 scale-90 group-hover:scale-100 z-30">
-                      <div className="bg-gray-900 text-white text-xs px-4 py-2 rounded-xl shadow-2xl whitespace-nowrap">
-                        <div className="font-semibold tracking-wide">{loc.company}</div>
-                        <div className="text-gray-300 text-[10px] mt-1">{loc.country}</div>
+                    <Popup>
+                      <div className="text-center min-w-[200px]">
+                        <div className="font-bold text-red-600 text-lg mb-1">
+                          {location.company}
+                        </div>
+                        <div className="text-gray-700 font-medium">
+                          {location.country}
+                        </div>
+                        <div className="text-gray-500 text-sm mt-1">
+                          {location.city}
+                        </div>
+                        <div className="mt-2 pt-2 border-t border-gray-200 text-xs text-gray-400">
+                          Project Completed
+                        </div>
                       </div>
-                      <div className="w-3 h-3 bg-gray-900 rotate-45 absolute left-1/2 -translate-x-1/2 -bottom-1"></div>
-                    </div>
-                  </div>
+                    </Popup>
+                  </Marker>
                 ))}
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none"></div>
+              </MapContainer>
             </div>
+            
+           
           </div>
         </div>
       </section>
