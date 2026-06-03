@@ -419,70 +419,31 @@ function Contact() {
               </div>
             </div>
 
-            {/* Office Address Section */}
-            <div className="mt-16 md:mt-20 lg:mt-24">
-              {/* Header */}
-              <div className="text-center mb-12">
-                <h2 className="text-[32px] md:text-[36px] lg:text-[42px] font-bold text-black">
-                  Meet Us At Our <span className="text-red-600">Office</span>
-                </h2>
-                <p className="text-gray-900 text-base md:text-lg mt-2">Visit us at any of our global locations</p>
-              </div>
-
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-                {/* Left Column: Address Information */}
-                <div
-                  ref={leftAddressRef}
-                  className={`space-y-12 transition-all duration-1000 delay-200 ${
-                    isVisible.leftAddress
-                      ? 'opacity-100 translate-x-0'
-                      : 'opacity-0 -translate-x-20'
-                  }`}
-                >
-                  {/* Head Office - Pune */}
-                <div className="bg-gray-100 rounded-2xl p-6 md:p-8 border border-gray-300 hover:border-red-500 transition-all duration-300 shadow-sm">
-  <div className="flex items-center mb-6">
-    <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
-      <MapPin className="w-6 h-6 text-white" />
-    </div>
-    <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Head Office - Pune</h3>
-  </div>
-  <div className="pl-4 md:pl-16 space-y-4">
-    <p className="text-gray-700 text-base md:text-lg leading-relaxed">
-      Bhumkar Estate Sr. No. 14/7, Behind Swami Narayan Temple and Krushna Kunj Phase 2, <br />
-      Nr. JSPM College Narhe, Pune – 411041
+          {/* Location Map Section */}
+<div className="mt-16 md:mt-20 lg:mt-24">
+  <div className="text-center mb-8">
+    <h2 className="text-[32px] md:text-[36px] lg:text-[42px] font-bold text-black">
+      Find <span className="text-red-600">Us</span>
+    </h2>
+    <p className="text-gray-700 text-base md:text-lg mt-2">
+      Visit our office location in Pune
     </p>
-    <div className="flex items-center space-x-3 text-gray-700">
-      <Phone className="w-4 h-4 text-red-600" />
-      <span>+91-8669688650/51</span>
-    </div>
-    <div className="flex items-center space-x-3 text-gray-700">
-      <Mail className="w-4 h-4 text-red-600" />
-      <span>sales@accuonproject.in</span>
-    </div>
   </div>
-</div>
-                </div>
 
-                {/* Right Column: Office Image - using img10.avif from public folder */}
-                <div
-                  ref={rightOfficeImageRef}
-                  className={`flex flex-col justify-center transition-all duration-1000 delay-200 ${
-                    isVisible.rightOfficeImage
-                      ? 'opacity-100 translate-x-0'
-                      : 'opacity-0 translate-x-20'
-                  }`}
-                >
-                  <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-white/20 backdrop-blur-md border-2 border-white/30">
-                    <img
-                      src="assets/office.jpeg"
-                      alt="Accuon Office"
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+  <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-16">
+  <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.919453064346!2d73.83019517701729!3d18.441965926824302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc295ce5b4adf15%3A0xac4e8d363b96ddd7!2sAccuon%20Projects%20%26%20Engineers%20(I)%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1780472050467!5m2!1sen!2sin"
+
+    width="100%"
+    height="500"
+    style={{ border: 0 }}
+    allowFullScreen=""
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Accuon Projects Location"
+  />
+</div>
+</div>
           </div>
         </section>
       </div>

@@ -80,7 +80,7 @@ function Water() {
              Process Automation for Water & <span className="text-red-600">Wastewater Treatment Industries</span>
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              At Accuon Projects & Engineers India Pvt. Ltd, we deliver intelligent, reliable, and scalable turnkey process automation solutions for the Water and Wastewater Treatment sector, helping industries and municipalities achieve operational excellence, regulatory compliance, and environmental sustainability.
+              At Accuon Projects & Engineers India Pvt. Ltd, we deliver intelligent, reliable and scalable turnkey process automation solutions for the Water and Wastewater Treatment sector, helping industries and municipalities achieve operational excellence, regulatory compliance and environmental sustainability.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ function Water() {
 
         <p className="text-sm md:text-base text-white leading-relaxed">
           We provide end-to-end automation for water purification,
-          desalination, and distribution systems, ensuring consistent water
+          desalination and distribution systems, ensuring consistent water
           quality and optimized resource usage.
         </p>
 
@@ -124,7 +124,7 @@ function Water() {
             </div>
 
             <p className="text-white text-sm md:text-base leading-relaxed">
-              DCS/PLC-based control for filtration, RO, UV, and chemical dosing systems
+              DCS/PLC-based control for filtration, RO, UV and chemical dosing systems
             </p>
           </div>
 
@@ -146,7 +146,7 @@ function Water() {
             </div>
 
             <p className="text-white text-sm md:text-base leading-relaxed">
-              Instrumentation for flow, pressure, turbidity, and pH control
+              Instrumentation for flow, pressure, turbidity and pH control
             </p>
           </div>
 
@@ -157,7 +157,7 @@ function Water() {
             </div>
 
             <p className="text-white text-sm md:text-base leading-relaxed">
-              Electrical panels for pump stations, MCCs, and VFDs
+              Electrical panels for pump stations, MCCs and VFDs
             </p>
           </div>
 
@@ -331,7 +331,7 @@ function Water() {
       </h2>
 
       <p className="text-sm md:text-base lg:text-lg text-black max-w-5xl mx-auto leading-relaxed">
-        We support STPs, ETPs, and ZLD systems with robust automation that
+        We support STPs, ETPs and ZLD systems with robust automation that
         enhances treatment efficiency and ensures safe discharge or reuse.
       </p>
     </div>
@@ -377,7 +377,7 @@ function Water() {
             </div>
 
             <p className="text-white text-sm md:text-base leading-relaxed">
-              Process control for aeration, sedimentation, biological treatment, and sludge handling
+              Process control for aeration, sedimentation, biological treatment and sludge handling
             </p>
           </div>
 
@@ -438,7 +438,7 @@ function Water() {
             Join the Future of Water Treatment Industry
           </h2>
           <p className="text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base px-4">
-            Join businesses and innovators who trust Accuon to build smarter, faster, and more impactful solutions.
+            Join businesses and innovators who trust Accuon to build smarter, faster and more impactful solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <a

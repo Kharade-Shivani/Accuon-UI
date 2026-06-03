@@ -80,7 +80,7 @@ function Chemicals() {
               Turnkey Process Automation Solutions for <span className="text-red-600">Chemicals & Pharmaceuticals</span>
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              As a trusted turnkey process automation solutions company, we specialize in delivering comprehensive, end-to-end automation systems for the Pharma, API, Chemicals, and Specialty manufacturing sectors. Our solutions are designed to meet the industry's stringent regulatory requirements while enhancing operational efficiency, product quality, and scalability. From conceptual design and engineering to deployment, validation, and support, we provide a seamless automation experience tailored to the unique needs of chemical and pharmaceutical enterprises. Our expertise ensures faster time-to-market, reduced operational risks, and sustainable growth.
+              As a trusted turnkey process automation solutions company, we specialize in delivering comprehensive, end-to-end automation systems for the Pharma, API, Chemicals and Specialty manufacturing sectors. Our solutions are designed to meet the industry's stringent regulatory requirements while enhancing operational efficiency, product quality and scalability. From conceptual design and engineering to deployment, validation and support, we provide a seamless automation experience tailored to the unique needs of chemical and pharmaceutical enterprises. Our expertise ensures faster time-to-market, reduced operational risks and sustainable growth.
             </p>
           </div>
         </div>
@@ -111,7 +111,7 @@ function Chemicals() {
                 Industry-Specific Expertise
               </h3>
               <p className="text-white/95 text-sm md:text-base leading-relaxed">
-                Proven experience in chemical, pharmaceutical, and specialty manufacturing environments.
+                Proven experience in chemical, pharmaceutical and specialty manufacturing environments.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ function Chemicals() {
                 Compliance-Ready Architecture
               </h3>
               <p className="text-white/95 text-sm md:text-base leading-relaxed">
-                Solutions built to meet FDA, GMP, GAMP, and 21 CFR Part 11 standards.
+                Solutions built to meet FDA, GMP, GAMP and 21 CFR Part 11 standards.
               </p>
             </div>
           </div>
@@ -137,7 +137,7 @@ function Chemicals() {
                 End-to-End Turnkey Delivery
               </h3>
               <p className="text-white/95 text-sm md:text-base leading-relaxed">
-                From design and engineering to commissioning, validation, and support.
+                From design and engineering to commissioning, validation and support.
               </p>
             </div>
           </div>
@@ -157,7 +157,7 @@ function Chemicals() {
                 Integrated Technology Stack
               </h3>
               <p className="text-white/95 text-sm md:text-base leading-relaxed">
-                Seamless integration with PLC, DCS, SCADA, MES, LIMS, and ERP systems.
+                Seamless integration with PLC, DCS, SCADA, MES, LIMS and ERP systems.
               </p>
             </div>
           </div>
@@ -219,7 +219,7 @@ function Chemicals() {
               Reactor Automation
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              Temperature, pressure, and flow control.
+              Temperature, pressure and flow control.
               <br />
               Batch recipe execution and safety interlocks.
             </p>
@@ -233,7 +233,7 @@ function Chemicals() {
               Distillation Unit Automation
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              Column control, reflux ratio management, and energy optimization.
+              Column control, reflux ratio management and energy optimization.
             </p>
           </div>
         </div>
@@ -245,7 +245,7 @@ function Chemicals() {
               Centrifuge & Filtration Systems
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              Speed control, vibration monitoring, and automated discharge.
+              Speed control, vibration monitoring and automated discharge.
             </p>
           </div>
         </div>
@@ -257,7 +257,7 @@ function Chemicals() {
               Dryers (Tray, Fluid Bed, Spray)
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              Moisture control, temperature profiling, and batch tracking.
+              Moisture control, temperature profiling and batch tracking.
             </p>
           </div>
         </div>
@@ -273,7 +273,7 @@ function Chemicals() {
               Utility Systems
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              Boiler, chiller, HVAC, and compressed air system automation.
+              Boiler, chiller, HVAC and compressed air system automation.
             </p>
           </div>
         </div>
@@ -285,7 +285,7 @@ function Chemicals() {
               Effluent Treatment Plant (ETP)
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              pH control, flow balancing, and compliance monitoring.
+              pH control, flow balancing and compliance monitoring.
             </p>
           </div>
         </div>
@@ -309,7 +309,7 @@ function Chemicals() {
               Quality Control Labs
             </h3>
             <p className="text-gray-800 text-sm md:text-[15px] leading-7">
-              LIMS integration, sample tracking, and automated reporting.
+              LIMS integration, sample tracking and automated reporting.
             </p>
           </div>
         </div>
@@ -326,7 +326,7 @@ function Chemicals() {
             Join the Future of Chemicals Industry
           </h2>
           <p className="text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base px-4">
-            Join businesses and innovators who trust Accuon to build smarter, faster, and more impactful solutions.
+            Join businesses and innovators who trust Accuon to build smarter, faster and more impactful solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <a

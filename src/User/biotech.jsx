@@ -80,7 +80,7 @@ function Biotech() {
               BioTech/Pharma <span className="text-red-600">Automation Solutions</span>
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              At Accuon Projects & Engineers India Pvt. Ltd, we offer end-to-end solutions, for Industrial Field Instrumentation To design, engineer, install, and validate comprehensive Electrical, Instrumentation & Control (E&IC) systems for a biotech/pharmaceutical facility that supports production, purification, filling, packaging, and/or R&D processes, ensuring high operational efficiency, compliance, and data integrity.
+              At Accuon Projects & Engineers India Pvt. Ltd, we offer end-to-end solutions, for Industrial Field Instrumentation To design, engineer, install and validate comprehensive Electrical, Instrumentation & Control (E&IC) systems for a biotech/pharmaceutical facility that supports production, purification, filling, packaging and/or R&D processes, ensuring high operational efficiency, compliance and data integrity.
             </p>
           </div>
         </div>
@@ -151,12 +151,12 @@ function Biotech() {
               },
               {
                 title: "Periodic calibration and testing",
-                description: "Regular calibration and testing services to maintain accuracy, compliance, and optimal system performance.",
+                description: "Regular calibration and testing services to maintain accuracy, compliance and optimal system performance.",
                 icon: <Target className="h-8 w-8 text-red-600" />
               },
               {
                 title: "Operator and maintenance staff train",
-                description: "Expert training programs for operators and maintenance staff to ensure safe, efficient, and effective system operation.",
+                description: "Expert training programs for operators and maintenance staff to ensure safe, efficient and effective system operation.",
                 icon: <GraduationCap className="h-8 w-8 text-red-600" />
               }
             ].map((service, index) => (
@@ -272,7 +272,7 @@ function Biotech() {
             Join the Future of Biotech-Pharma
           </h2>
           <p className="text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base px-4">
-            Join businesses and innovators who trust Accuon to build smarter, faster, and more impactful solutions.
+            Join businesses and innovators who trust Accuon to build smarter, faster and more impactful solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <a

@@ -80,7 +80,7 @@ function Sugar() {
               Explore Our Expertise in <span className="text-red-600">Sugar, Ethanol, Distillery & Oil & Gas Automation</span>
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              At Accuon Projects & Engineers India Pvt. Ltd,  we  proven excellence in delivering end-to-end process automation and turnkey E&IC solutions tailored for the Sugar, Ethanol, Distillery, and Oil & Gas industries. Our deep domain knowledge, global execution experience, and cutting-edge technologies empower clients to optimize operations, enhance safety, and drive sustainable growth.
+              At Accuon Projects & Engineers India Pvt. Ltd,  we  proven excellence in delivering end-to-end process automation and turnkey E&IC solutions tailored for the Sugar, Ethanol, Distillery and Oil & Gas industries. Our deep domain knowledge, global execution experience and cutting-edge technologies empower clients to optimize operations, enhance safety and drive sustainable growth.
             </p>
           </div>
         </div>
@@ -151,7 +151,7 @@ function Sugar() {
           {[
             "Improved throughput and yield",
             "Reduced downtime and manual intervention",
-            "Compliance with FDA, GMP, and environmental norms",
+            "Compliance with FDA, GMP and environmental norms",
             "Seamless integration with MES and ERP systems"
           ].map((item, index) => (
             <div key={index} className="flex items-start gap-4">
@@ -204,7 +204,7 @@ function Sugar() {
         <p className="text-white text-base md:text-lg leading-relaxed max-w-xl">
           From cane yard to crystallization, fermentation to distillation,
           we provide <span className="font-bold">comprehensive automation solutions</span> that
-          ensure consistent product quality, energy efficiency, and
+          ensure consistent product quality, energy efficiency and
           regulatory compliance.
         </p>
       </div>
@@ -234,8 +234,8 @@ function Sugar() {
       </h2>
 
       <p className="text-sm md:text-base lg:text-lg text-black max-w-5xl mx-auto leading-relaxed">
-        We serve upstream, midstream, and downstream segments with robust,
-        scalable, and secure automation systems designed for harsh
+        We serve upstream, midstream and downstream segments with robust,
+        scalable and secure automation systems designed for harsh
         environments and mission-critical operations.
       </p>
     </div>
@@ -293,7 +293,7 @@ function Sugar() {
             </div>
 
             <p className="text-white text-sm md:text-base leading-relaxed">
-              Compressor, pump, and turbine control systems
+              Compressor, pump and turbine control systems
             </p>
           </div>
 
@@ -333,7 +333,7 @@ function Sugar() {
             Join the Future of Sugar Industry
           </h2>
           <p className="text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base px-4">
-            Join businesses and innovators who trust Accuon to build smarter, faster, and more impactful solutions.
+            Join businesses and innovators who trust Accuon to build smarter, faster and more impactful solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4">
             <a

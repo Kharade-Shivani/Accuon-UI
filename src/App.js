@@ -19,6 +19,7 @@ import Sugar from "./User/Sugar";
 import RenewableEnergy from "./User/RenewableEnergy";
 import Pulp from "./User/Pulp";
 import Water from "./User/Water";
+import ChimneyAviationLight from "./User/ChimneyAviationLight";
 
 import TurnkeySolutions from "./User/TurnkeySolutions";
 import EngineeringService from "./User/EngineeringService";
@@ -79,6 +80,9 @@ const App = () => {
           <Route path="renewable-energy" element={<RenewableEnergy/>} />
           <Route path="pulp-paper-textile" element={<Pulp/>} />
           <Route path="water-and-wastewater-treatment" element={<Water/>} />
+          <Route path="Chimney-Aviation-Light" element={<ChimneyAviationLight/>} />
+          
+
 
 
 

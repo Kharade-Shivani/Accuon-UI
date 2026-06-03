@@ -28,7 +28,7 @@ import {
   Settings
 } from 'lucide-react';
 
-function Dairy() {
+function ChimneyAviationLight() {
   const [headerHeight, setHeaderHeight] = useState(0);
 
   useEffect(() => {
@@ -58,7 +58,7 @@ function Dairy() {
       <div className="relative w-full h-[400px] overflow-hidden">
         <img
           src="assets/clientbanner.png"
-          alt="Dairy Banner"
+          alt="Cements Banner"
           className="w-full h-full object-cover"
         />
 
@@ -66,8 +66,8 @@ function Dairy() {
         <div className="absolute inset-0 bg-black opacity-70"></div>
 
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center px-4">
-          Food & Beverage Automation Solutions
+          <h1 className="text-white text-2xl md:text-3xl lg:text-4xl font-bold text-center px-4">
+  Industrial Chimney Aviation Light Automation
           </h1>
         </div>
       </div>
@@ -76,69 +76,64 @@ function Dairy() {
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            {/* <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Dairy <span className="text-red-600">Automation Solutions</span>
-            </h2> */}
+           
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-             We provide advanced automation solutions for the food and beverage industry to improve productivity, product quality safety and operational efficiency. Our services include PLC, SCADA, HMI, VFD, process control, batch management and plant monitoring systems for various applications. Our automation solutions help reduce downtime, optimize energy consumption, ensure consistent product quality and comply with industry standards and regulations.
+              We are a globally trusted partner in delivering cutting-edge solutions across the Mining, Minerals, Metal/Steel & Cement industry. With a proven track record of successful project execution, our team combines deep domain expertise with advanced technologies to optimize operations, enhance safety and ensure compliance with international standards. We don’t just automate processes—we transform industries.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Two Column Grid - Right side image, Left side text */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
-            {/* Left side - Card 1 with Red Background */}
-   <div className="bg-red-600 rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl">
-  <div className="space-y-6">
-    <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight">
-      Plants covered in automation
-    </h3>
-    <ul className="space-y-3">
-      {[
-  'Beverage Processing Plants',
-  'Dairy Processing Plants',
-  'Breweries and Distilleries',
-  'Bottling and Packaging Lines',
-  'Water Treatment and RO Plants',
-  'Food Processing and Packaging Facilities',
-  'Conveyor and Material Handling Systems',
-  'CIP (Clean-In-Place) Automation Systems'
+ 
+       {/* Two Column Grid - Right side image, Left side text */}
+       <section className="py-12 md:py-20 bg-white">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="grid md:grid-cols-2 gap-8 lg:gap-12 xl:gap-16">
+             {/* Left side - Card 1 with Red Background */}
+    <div className="bg-red-600 rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl">
+   <div className="space-y-6">
+     <h3 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight">
+       Plants covered in automation
+     </h3>
+     <ul className="space-y-3">
+       {[
+  'Cement Plants',
+  'Thermal Power Plants',
+  'Float Glass / Fiber Glass Plants',
+  'Steel & Metal Processing Plants',
+  'Pharmaceutical Manufacturing Plants'
 ].map((item, index) => (
-        <li key={index} className="flex items-start gap-3">
-          <CheckCircle className="h-5 w-5 text-white mt-0.5 flex-shrink-0" />
-          <span className="text-white text-sm md:text-base lg:text-lg">{item}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
-</div>
-
-          {/* Right side - Full Image */}
-<div className="relative w-full h-full overflow-hidden rounded-2xl shadow-xl">
-  <img
-    src="assets/Industries/dairy.jpeg"
-    alt="Dairy Processing Facility"
-    className="w-full h-full object-cover"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-</div>
-          </div>
-        </div>
-      </section>
-
-     
+         <li key={index} className="flex items-start gap-3">
+           <CheckCircle className="h-5 w-5 text-white mt-0.5 flex-shrink-0" />
+           <span className="text-white text-sm md:text-base lg:text-lg">{item}</span>
+         </li>
+       ))}
+     </ul>
+   </div>
+ </div>
+ 
+           {/* Right side - Full Image */}
+ <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-xl">
+   <img
+     src="assets/Industries/dairy.jpeg"
+     alt="Dairy Processing Facility"
+     className="w-full h-full object-cover"
+   />
+   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+ </div>
+           </div>
+         </div>
+       </section>
 
 
-     
+
+      
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-red-600 to-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4">
-            Join the Future of Dairy Industry
+            Join the Future of Cement Industry
           </h2>
           <p className="text-white/90 mb-6 md:mb-8 max-w-2xl mx-auto text-sm md:text-base px-4">
             Join businesses and innovators who trust Accuon to build smarter, faster and more impactful solutions.
@@ -171,4 +166,4 @@ function Dairy() {
   );
 }
 
-export default Dairy;
+export default ChimneyAviationLight;

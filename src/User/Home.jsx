@@ -115,18 +115,57 @@ const Home = () => {
   const [loadingAccreditations, setLoadingAccreditations] = useState(true);
   const [accreditationsError, setAccreditationsError] = useState(null);
 
-  // Project locations with exact coordinates
-  const projectLocations = [
-    { company: "INDORAMA CORPORATION", country: "Russia", lat: 55.7558, lng: 37.6173,  },
-    { company: "INDORAMA CORPORATION", country: "Georgia", lat: 41.7151, lng: 44.8271, },
-    { company: "TACO.CO", country: "Turkey", lat: 39.9334, lng: 32.8597, },
-    { company: "GCI", country: "Saudi Arabia", lat: 24.7136, lng: 46.6753, },
-    { company: "FARABI", country: "Saudi Arabia", lat: 21.4858, lng: 39.1925,  },
-    { company: "JOSEPH", country: "UAE", lat: 25.2048, lng: 55.2708,  },
-    { company: "KEYBOUT", country: "Tanzania", lat: -6.7924, lng: 39.2083,  },
-    { company: "SENGENG", country: "Singapore", lat: 1.3521, lng: 103.8198,  },
-   
-  ];
+ // Project locations
+const projectLocations = [
+  {
+    company: "INDORAMA CORPORATION",
+    country: "RUSSIA",
+    lat: 55.7558,
+    lng: 37.6173,
+  },
+  {
+    company: "INDORAMA CORPORATION",
+    country: "GEROGIA",
+    lat: 41.7151,
+    lng: 44.8271,
+  },
+  {
+    company: "TACO.CO",
+    country: "TURKEY",
+    lat: 39.9334,
+    lng: 32.8597,
+  },
+  {
+    company: "GCI",
+    country: "SAUDI ARABIA",
+    lat: 24.7136,
+    lng: 46.6753,
+  },
+  {
+    company: "FARABI",
+    country: "SAUDI ARABIA",
+    lat: 21.4858,
+    lng: 39.1925,
+  },
+  {
+    company: "JOSEPH",
+    country: "UAE",
+    lat: 25.2048,
+    lng: 55.2708,
+  },
+  {
+    company: "KEYBOUT",
+    country: "TANZANIYA",
+    lat: -6.7924,
+    lng: 39.2083,
+  },
+  {
+    company: "SENGENG",
+    country: "SINGAPORE",
+    lat: 1.3521,
+    lng: 103.8198,
+  },
+];
 
   // Get header height dynamically
   useEffect(() => {
@@ -1360,191 +1399,189 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Latest News & Updates Section with Fullscreen */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 bg-red-50 px-4 py-2 rounded-full mb-6">
-              <Calendar className="h-5 w-5 text-red-600" />
-              <span className="text-sm font-semibold text-red-600">Latest Updates</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              News & <span className="text-red-600">Updates</span>
-            </h2>
-            <p className="text-gray-600">
-              Stay updated with our latest achievements and company news
-            </p>
-          </div>
-
-          {loadingNews ? (
-            <div className="flex justify-center items-center py-12">
-              <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-red-600 border-t-transparent"></div>
-            </div>
-          ) : newsError ? (
-            <div className="text-center py-8">
-              <div className="inline-flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-xl">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <p className="text-base">{newsError}</p>
-              </div>
-            </div>
-          ) : newsUpdates.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {newsUpdates.map((news) => (
-                <div
-                  key={news.id}
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
-                >
-                  {/* Media Content (Video or Image) - Clickable for fullscreen */}
-                 {news.type === 'video' && news.video && (
-  <div className="relative aspect-video bg-gray-900 overflow-hidden cursor-pointer">
-    {/* Clickable fullscreen layer - behind controls */}
-    <div 
-      className="absolute inset-0 z-10"
-      onClick={() => openFullscreen(news)}
-    />
-    
-    <video
-      ref={el => videoRefs.current[news.id] = el}
-      src={news.video}
-      className="w-full h-full object-cover"
-      loop
-      muted={videoStates[news.id]?.isMuted !== undefined ? videoStates[news.id].isMuted : true}
-      playsInline
-      poster={news.thumbnail || "/assets/video-poster.jpg"}
-    />
-    
-    {/* Video Controls - z-20 so they're above the fullscreen click layer */}
-    <div className="absolute inset-0 z-20 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          togglePlayPause(news.id);
-        }}
-        className="w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg"
-        aria-label={videoStates[news.id]?.isPlaying ? "Pause" : "Play"}
-      >
-        {videoStates[news.id]?.isPlaying ? (
-          <Pause className="h-6 w-6 text-gray-800" />
-        ) : (
-          <Play className="h-6 w-6 text-gray-800 ml-0.5" />
-        )}
-      </button>
-      
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          toggleMute(news.id);
-        }}
-        className="w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg"
-        aria-label={videoStates[news.id]?.isMuted ? "Unmute" : "Mute"}
-      >
-        {videoStates[news.id]?.isMuted ? (
-          <VolumeX className="h-6 w-6 text-gray-800" />
-        ) : (
-          <Volume2 className="h-6 w-6 text-gray-800" />
-        )}
-      </button>
-
-      {/* Fullscreen hint icon */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation();
-          openFullscreen(news);
-        }}
-        className="w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg"
-        aria-label="Open fullscreen"
-      >
-        <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-        </svg>
-      </button>
+     {/* Latest News & Updates Section with Fullscreen */}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center max-w-3xl mx-auto mb-12">
+      <div className="inline-flex items-center gap-2 bg-red-50 px-4 py-2 rounded-full mb-6">
+        <Calendar className="h-5 w-5 text-red-600" />
+        <span className="text-sm font-semibold text-red-600">Latest Updates</span>
+      </div>
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        News & <span className="text-red-600">Updates</span>
+      </h2>
+      <p className="text-gray-600">
+        Stay updated with our latest achievements and company news
+      </p>
     </div>
-    
-    <div className="absolute top-3 left-3 z-30 bg-red-600 text-white px-2 py-1 rounded-lg text-xs font-semibold flex items-center gap-1">
-      <Video className="h-3 w-3" />
-      <span>Video</span>
-    </div>
-  </div>
-)}
-                  
-                  {news.type === 'image' && news.image && (
-                    <div 
-                      className="relative aspect-video overflow-hidden cursor-pointer group"
-                      onClick={() => openFullscreen(news)}
-                    >
-                      <img
-                        src={news.image}
-                        alt={news.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
-                        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="bg-black/70 rounded-full p-3">
-                            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <div className="absolute top-3 left-3 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold flex items-center gap-1">
-                        <ImageIcon className="h-3 w-3" />
-                        <span>Image</span>
-                      </div>
-                    </div>
-                  )}
 
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="p-2 bg-red-50 rounded-lg">
-                        {news.type === 'video' ? (
-                          <Video className="h-5 w-5 text-red-600" />
-                        ) : news.type === 'image' ? (
-                          <ImageIcon className="h-5 w-5 text-red-600" />
-                        ) : (
-                          <Calendar className="h-5 w-5 text-red-600" />
-                        )}
-                      </div>
-                      <div className="text-xs text-gray-500">
-                        {formatDate(news.createdAt)}
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
-                      {news.title}
-                    </h3>
-                    <p className="text-gray-600 text-sm line-clamp-3 mb-4">
-                      {news.description}
-                    </p>
-                    
-                    {news.description && news.description.length > 120 && (
-                      <button 
-                        onClick={() => {
-                          alert(`Full announcement:\n\nTitle: ${news.title}\n\nDescription: ${news.description}`);
-                        }}
-                        className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors inline-flex items-center gap-1"
-                      >
-                        Read More
-                        <ChevronRight className="h-4 w-4" />
-                      </button>
+    {loadingNews ? (
+      <div className="flex justify-center items-center py-12">
+        <div className="inline-block animate-spin rounded-full h-12 w-12 border-4 border-red-600 border-t-transparent"></div>
+      </div>
+    ) : newsError ? (
+      <div className="text-center py-8">
+        <div className="inline-flex items-center gap-2 text-red-600 bg-red-50 p-4 rounded-xl">
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <p className="text-base">{newsError}</p>
+        </div>
+      </div>
+    ) : newsUpdates.length > 0 ? (
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        {newsUpdates.map((news) => (
+          <div
+            key={news.id}
+            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+          >
+            {/* Media Content (Video or Image) - Clickable for fullscreen */}
+            {news.type === 'video' && news.video && (
+              <div className="relative aspect-video bg-gray-900 overflow-hidden cursor-pointer">
+                {/* Clickable fullscreen layer - behind controls */}
+                <div 
+                  className="absolute inset-0 z-10"
+                  onClick={() => openFullscreen(news)}
+                />
+                
+                <video
+                  ref={el => videoRefs.current[news.id] = el}
+                  src={news.video}
+                  className="w-full h-full object-cover"
+                  loop
+                  muted={videoStates[news.id]?.isMuted !== undefined ? videoStates[news.id].isMuted : true}
+                  playsInline
+                  poster={news.thumbnail || "/assets/video-poster.jpg"}
+                />
+                
+                {/* Video Controls - z-20 so they're above the fullscreen click layer */}
+                <div className="absolute inset-0 z-20 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      togglePlayPause(news.id);
+                    }}
+                    className="w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg"
+                    aria-label={videoStates[news.id]?.isPlaying ? "Pause" : "Play"}
+                  >
+                    {videoStates[news.id]?.isPlaying ? (
+                      <Pause className="h-6 w-6 text-gray-800" />
+                    ) : (
+                      <Play className="h-6 w-6 text-gray-800 ml-0.5" />
                     )}
+                  </button>
+                  
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      toggleMute(news.id);
+                    }}
+                    className="w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg"
+                    aria-label={videoStates[news.id]?.isMuted ? "Unmute" : "Mute"}
+                  >
+                    {videoStates[news.id]?.isMuted ? (
+                      <VolumeX className="h-6 w-6 text-gray-800" />
+                    ) : (
+                      <Volume2 className="h-6 w-6 text-gray-800" />
+                    )}
+                  </button>
+
+                  {/* Fullscreen hint icon */}
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openFullscreen(news);
+                    }}
+                    className="w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center transform hover:scale-110 transition-all duration-300 shadow-lg"
+                    aria-label="Open fullscreen"
+                  >
+                    <svg className="w-5 h-5 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                    </svg>
+                  </button>
+                </div>
+                
+                <div className="absolute top-3 left-3 z-30 bg-red-600 text-white px-2 py-1 rounded-lg text-xs font-semibold flex items-center gap-1">
+                  <Video className="h-3 w-3" />
+                  <span>Video</span>
+                </div>
+              </div>
+            )}
+            
+            {news.type === 'image' && news.image && (
+              <div 
+                className="relative aspect-video overflow-hidden cursor-pointer group"
+                onClick={() => openFullscreen(news)}
+              >
+                <img
+                  src={news.image}
+                  alt={news.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="bg-black/70 rounded-full p-3">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
-              <div className="inline-flex flex-col items-center gap-3 text-gray-500">
-                <Calendar className="w-12 h-12" />
-                <p className="text-lg">No news updates available at the moment.</p>
-                <p className="text-sm">Please check back later.</p>
+                
+                <div className="absolute top-3 left-3 bg-blue-600 text-white px-2 py-1 rounded-lg text-xs font-semibold flex items-center gap-1">
+                  <ImageIcon className="h-3 w-3" />
+                  <span>Image</span>
+                </div>
               </div>
+            )}
+
+            {/* Content - Date removed */}
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="p-2 bg-red-50 rounded-lg">
+                  {news.type === 'video' ? (
+                    <Video className="h-5 w-5 text-red-600" />
+                  ) : news.type === 'image' ? (
+                    <ImageIcon className="h-5 w-5 text-red-600" />
+                  ) : (
+                    <Calendar className="h-5 w-5 text-red-600" />
+                  )}
+                </div>
+                {/* Date div removed */}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+                {news.title}
+              </h3>
+              <p className="text-gray-600 text-sm line-clamp-3 mb-4">
+                {news.description}
+              </p>
+              
+              {news.description && news.description.length > 120 && (
+                <button 
+                  onClick={() => {
+                    alert(`Full announcement:\n\nTitle: ${news.title}\n\nDescription: ${news.description}`);
+                  }}
+                  className="text-red-600 font-semibold text-sm hover:text-red-700 transition-colors inline-flex items-center gap-1"
+                >
+                  Read More
+                  <ChevronRight className="h-4 w-4" />
+                </button>
+              )}
             </div>
-          )}
+          </div>
+        ))}
+      </div>
+    ) : (
+      <div className="text-center py-12">
+        <div className="inline-flex flex-col items-center gap-3 text-gray-500">
+          <Calendar className="w-12 h-12" />
+          <p className="text-lg">No news updates available at the moment.</p>
+          <p className="text-sm">Please check back later.</p>
         </div>
-      </section>
+      </div>
+    )}
+  </div>
+</section>
 
       {/* Fullscreen Modal - Working for both images and videos */}
       {isFullscreenOpen && fullscreenMedia && (

@@ -51,12 +51,14 @@ const Header = () => {
   const industriesDropdown = [
     { name: 'Biotech / Pharma', href: '/biotech-pharma' },
     { name: 'Chemicals & API', href: '/chemicals-api' },
-    { name: 'Dairy / Brewery / Food / Beverage', href: '/dairy-brewery-food-beverage' },
-    // { name: 'MMM & Cement', href: '/mmm-cement' },
+    { name: 'Food & Beverage Automation', href: '/dairy-brewery-food-beverage' },
+    // { name: 'Chimney Aviation Light ', href: '/mmm-cement' },
     { name: 'Sugar, Ethanol, Distillery & Oil & Gas', href: '/sugar-ethanol-distillery-oil-gas' },
     // { name: 'Renewable Energy', href: '/renewable-energy' },
     // { name: 'Pulp & Paper / Textile', href: '/pulp-paper-textile' },
     { name: 'Water and Wastewater Treatment', href: '/water-and-wastewater-treatment' },
+    { name: 'Chimney Aviation Light', href: '/Chimney-Aviation-Light' },
+
   ];
 
   // Navigation items - Removed "Our Clients" and added "Industries We Serve"

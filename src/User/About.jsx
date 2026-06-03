@@ -324,10 +324,10 @@ const About = () => {
       <div style={{ paddingTop: `${headerHeight}px` }}>
         
         {/* Banner Section - with fixed height 400px, overlay, and centered text */}
-        <div className="relative w-full h-[400px] overflow-hidden">
+        <div className="relative w-full  overflow-hidden">
           {/* Background Image */}
           <img 
-            src="assets/aboutbanner.webp" 
+            src="assets/aboutban.jpeg" 
             alt="About Us Banner" 
             className="w-full h-full object-cover"
           />
@@ -436,7 +436,9 @@ const About = () => {
         </section>
 
         {/* NEW: Quality Policy Section - Added here */}
-        <section className="py-12 md:py-20 bg-white relative overflow-hidden">
+        {/* <section className="py-12 md:py-20 bg-white relative overflow-hidden"> */}
+        {/* Quality Policy Section */}
+<section className="pt-12 md:pt-20 pb-4 md:pb-6 bg-white relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-red-50 rounded-full filter blur-3xl opacity-30 -z-10"></div>
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-50 rounded-full filter blur-3xl opacity-30 -z-10"></div>
@@ -538,7 +540,9 @@ const About = () => {
         </section>
 
         {/* Vision & Mission Section - Increased font sizes */}
-        <section className="py-12 md:py-20 relative overflow-hidden">
+        {/* <section className="py-12 md:py-20 relative overflow-hidden"> */}
+        {/* Vision & Mission Section */}
+<section className="pt-4 md:pt-6 pb-12 md:pb-20 relative overflow-hidden">
           
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
