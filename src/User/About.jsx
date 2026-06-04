@@ -331,14 +331,7 @@ const About = () => {
             alt="About Us Banner" 
             className="w-full h-full object-cover"
           />
-          {/* Dark Overlay */}
-          <div className="absolute inset-0 bg-black/70"></div>
-          {/* Centered Title Text */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <h1 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center">
-              About Us
-            </h1>
-          </div>
+          
         </div>
 
         {/* Hero Section - Content Section */}

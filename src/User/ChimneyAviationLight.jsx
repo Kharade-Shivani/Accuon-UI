@@ -115,7 +115,7 @@ function ChimneyAviationLight() {
            {/* Right side - Full Image */}
  <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-xl">
    <img
-     src="assets/Industries/dairy.jpeg"
+     src="assets/Industries/chimney.jpeg"
      alt="Dairy Processing Facility"
      className="w-full h-full object-cover"
    />

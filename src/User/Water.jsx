@@ -189,7 +189,7 @@ function Water() {
       {/* Left Image */}
       <div className="rounded-2xl overflow-hidden shadow-lg">
         <img
-          src="assets/industries/waste.png"
+          src="assets/industries/wbenefis.jpeg"
           alt="Benefits"
           className="w-full h-[240px] md:h-[340px] object-cover"
         />
@@ -420,7 +420,7 @@ function Water() {
       {/* Right Image Card */}
       <div className="bg-red-600 rounded-2xl p-4 shadow-xl">
         <img
-          src="assets/industries/water.png"
+          src="assets/industries/treatment.jpeg"
           alt="Wastewater Treatment Automation"
           className="w-full h-[300px] md:h-[400px] object-cover rounded-md"
         />

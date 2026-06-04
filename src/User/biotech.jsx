@@ -80,7 +80,7 @@ function Biotech() {
               BioTech/Pharma <span className="text-red-600">Automation Solutions</span>
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
-              At Accuon Projects & Engineers India Pvt. Ltd, we offer end-to-end solutions, for Industrial Field Instrumentation To design, engineer, install and validate comprehensive Electrical, Instrumentation & Control (E&IC) systems for a biotech/pharmaceutical facility that supports production, purification, filling, packaging and/or R&D processes, ensuring high operational efficiency, compliance and data integrity.
+              At Accuon Projects & Engineers India Pvt. Ltd, we offer end-to-end solutions, for Industrial Field Instrumentation To design, engineer, install and validate comprehensive Electrical, Instrumentation & Control (E&IC) systems for a biotech/pharmaceutical facility that supports production, purification, filling, packaging and R&D processes, ensuring high operational efficiency, compliance and data integrity.
             </p>
           </div>
         </div>
@@ -176,94 +176,6 @@ function Biotech() {
         </div>
       </section>
 
-      {/* Lighting Systems & Automation System Section */}
-      <section className="py-12 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8 md:mb-12 text-center">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">Lighting Systems</h2>
-            <div className="w-20 h-1 bg-red-600 mx-auto mt-4"></div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
-            {/* Left Column - Automation System */}
-            <div className="bg-red-600 rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 md:mb-6">Automation System</h3>
-              <ul className="space-y-3 md:space-y-4">
-                {[
-                  'Distributed Control Systems (DCS)',
-                  'Programmable Logic Controllers (PLC)',
-                  'SCADA/HMI solution',
-                  'PLC/DCS configuration & programming',
-                  'Alarm and event management',
-                  'Data logging and historian systems',
-                  '21 CFR Part 11 compliance (electronic records & signature)'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-white mt-0.5 flex-shrink-0" />
-                    <span className="text-white text-sm md:text-base lg:text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Right Column - Field Instruments */}
-            <div className="bg-red-600 rounded-2xl p-6 md:p-8 lg:p-10 shadow-xl">
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-4 md:mb-6">Field Instruments</h3>
-              <ul className="space-y-3 md:space-y-4">
-                {[
-                  'Instrumentation Cables & Glands',
-                  'Erection Of Instrumentation Package (instruments & cables)',
-                  'Cable Reeling Drum',
-                  'Erection & Earthing Materials',
-                  'Miscellaneous items including Light Fittings, Power & Control Junction Boxes, Welding & Hand, Lamp Power Supply Sockets'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-white mt-0.5 flex-shrink-0" />
-                    <span className="text-white text-sm md:text-base lg:text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Electrical Systems Package Section */}
-      <section className="py-12 md:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            {/* Left side - Image */}
-            <div className="relative rounded-2xl overflow-hidden shadow-xl order-1 md:order-none">
-              <img
-                src="assets/Industries/img2.jpg"
-                alt="Biotechnology Research"
-                className="w-full h-auto object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-            </div>
-
-            {/* Right side - Text Content */}
-            <div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                Electrical Systems Package
-              </h3>
-              <ul className="space-y-3">
-                {[
-                  'State-of-the-art research laboratories and facilities',
-                  'Collaborative partnerships with leading academic institutions',
-                  'Accelerated drug discovery using AI and machine learning',
-                  'Comprehensive preclinical and clinical development programs'
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-red-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm md:text-base">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-red-600 to-blue-600">

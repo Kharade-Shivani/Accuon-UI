@@ -122,49 +122,67 @@ const projectLocations = [
     country: "RUSSIA",
     lat: 55.7558,
     lng: 37.6173,
+    isSpecial: false
   },
   {
     company: "INDORAMA CORPORATION",
-    country: "GEROGIA",
+    country: "GEORGIA",  // Fixed spelling from "GEROGIA"
     lat: 41.7151,
     lng: 44.8271,
+    isSpecial: false
   },
   {
     company: "TACO.CO",
     country: "TURKEY",
     lat: 39.9334,
     lng: 32.8597,
+    isSpecial: false
   },
   {
     company: "GCI",
     country: "SAUDI ARABIA",
     lat: 24.7136,
     lng: 46.6753,
+    isSpecial: false
   },
   {
     company: "FARABI",
     country: "SAUDI ARABIA",
     lat: 21.4858,
     lng: 39.1925,
+    isSpecial: false
   },
   {
     company: "JOSEPH",
     country: "UAE",
     lat: 25.2048,
     lng: 55.2708,
+    isSpecial: false
   },
   {
     company: "KEYBOUT",
-    country: "TANZANIYA",
+    country: "TANZANIA",  // Fixed spelling from "TANZANIYA"
     lat: -6.7924,
     lng: 39.2083,
+    isSpecial: false
   },
   {
     company: "SENGENG",
     country: "SINGAPORE",
     lat: 1.3521,
     lng: 103.8198,
+    isSpecial: false
   },
+  // New India location with 100+ projects
+  {
+    company: "ACCUON PROJECTS & ENGINEERS",
+    country: "INDIA",
+    city: "Pune, Maharashtra",
+    lat: 18.5204,
+    lng: 73.8567,
+    isSpecial: true,
+    projectsCount: "100+"
+  }
 ];
 
   // Get header height dynamically
@@ -1681,28 +1699,40 @@ const projectLocations = [
                 />
                 <MapController center={[20, 0]} zoom={2} />
                 
-                {projectLocations.map((location, index) => (
-                  <Marker
-                    key={index}
-                    position={[location.lat, location.lng]}
-                    icon={redIcon}
-                  >
-                    <Popup>
-                      <div className="text-center min-w-[200px]">
-                        <div className="font-bold text-red-600 text-lg mb-1">
-                          {location.company}
-                        </div>
-                        <div className="text-gray-700 font-medium">
-                          {location.country}
-                        </div>
-                        <div className="text-gray-500 text-sm mt-1">
-                          {location.city}
-                        </div>
-                        
-                      </div>
-                    </Popup>
-                  </Marker>
-                ))}
+               {projectLocations.map((location, index) => (
+  <Marker
+    key={index}
+    position={[location.lat, location.lng]}
+    icon={redIcon}
+  >
+    <Popup>
+      <div className="text-center min-w-[200px]">
+        <div className="font-bold text-red-600 text-lg mb-1">
+          {location.company}
+        </div>
+        <div className="text-gray-700 font-medium">
+          {location.country}
+        </div>
+        {location.city && (
+          <div className="text-gray-500 text-sm mt-1">
+            {location.city}
+          </div>
+        )}
+        {/* Special display for India location */}
+        {location.isSpecial && location.projectsCount && (
+          <div className="mt-2 pt-2 border-t border-gray-200">
+            <div className="inline-flex items-center gap-1 bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs font-semibold">
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
+              </svg>
+              <span>{location.projectsCount} Projects Completed</span>
+            </div>
+          </div>
+        )}
+      </div>
+    </Popup>
+  </Marker>
+))}
               </MapContainer>
             </div>
             
