@@ -448,7 +448,7 @@ const About = () => {
              
               
               <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-                Our unwavering commitment to excellence in every project, every solution, and every client interaction.
+                Our unwavering commitment to excellence in every project, every solution and every client interaction.
               </p>
             </div>
 
@@ -482,12 +482,12 @@ const About = () => {
               {/* Policy Points Grid */}
               <div className="grid md:grid-cols-2 gap-4 md:gap-6 mb-8 md:mb-12">
                 {[
-                  { icon: Shield, text: "Delivering reliable, safe, and cost-effective project solutions.", color: "red" },
+                  { icon: Shield, text: "Delivering reliable, safe and cost-effective project solutions.", color: "red" },
                   { icon: CheckCircle, text: "Maintaining the highest standards of quality in execution and services.", color: "blue" },
-                  { icon: Globe, text: "Ensuring compliance with applicable statutory, regulatory, and client requirements.", color: "red" },
-                  { icon: TrendingUp, text: "Continuously improving our processes, systems, and employee competencies.", color: "blue" },
-                  { icon: Users, text: "Promoting a culture of safety, innovation, teamwork, and customer satisfaction.", color: "red" },
-                  { icon: Handshake, text: "Building long-term relationships with clients, vendors, and stakeholders through trust and professionalism.", color: "blue" }
+                  { icon: Globe, text: "Ensuring compliance with applicable statutory, regulatory and client requirements.", color: "red" },
+                  { icon: TrendingUp, text: "Continuously improving our processes, systems and employee competencies.", color: "blue" },
+                  { icon: Users, text: "Promoting a culture of safety, innovation, teamwork and customer satisfaction.", color: "red" },
+                  { icon: Handshake, text: "Building long-term relationships with clients, vendors and stakeholders through trust and professionalism.", color: "blue" }
                 ].map((item, idx) => {
                   const IconComponent = item.icon;
                   return (
