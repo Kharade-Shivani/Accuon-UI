@@ -420,7 +420,7 @@ function Water() {
       {/* Right Image Card */}
       <div className="bg-red-600 rounded-2xl p-4 shadow-xl">
         <img
-          src="assets/industries/treatment.jpeg"
+          src="assets/Industries/treatment.jpeg"
           alt="Wastewater Treatment Automation"
           className="w-full h-[300px] md:h-[400px] object-cover rounded-md"
         />
