@@ -212,7 +212,7 @@ function Sugar() {
       {/* Right Image Card */}
       <div className="bg-red-600 rounded-2xl p-4 md:p-5 shadow-xl">
         <img
-          src="assets/industries/sugarrr.jpeg"
+          src="assets/Industries/sugarrr.jpeg"
           alt="Sugar Ethanol Distillery Automation"
           className="w-full h-[260px] md:h-[320px] object-cover rounded-md"
         />
@@ -314,7 +314,7 @@ function Sugar() {
       {/* Right Image Card */}
       <div className="bg-red-600 rounded-2xl p-4 shadow-xl">
         <img
-          src="assets/industries/sug.jpeg"
+          src="assets/Industries/sug.jpeg"
           alt="Oil & Gas Automation"
           className="w-full h-[300px] md:h-[400px] object-cover rounded-md"
         />

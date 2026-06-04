@@ -189,7 +189,7 @@ function Water() {
       {/* Left Image */}
       <div className="rounded-2xl overflow-hidden shadow-lg">
         <img
-          src="assets/industries/wbenefis.jpeg"
+          src="assets/Industries/wbenefis.jpeg"
           alt="Benefits"
           className="w-full h-[240px] md:h-[340px] object-cover"
         />
